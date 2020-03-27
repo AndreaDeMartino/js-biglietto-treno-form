@@ -7,7 +7,7 @@
  */
 var container = document.getElementById('biglietto');
 var bottoneGenera = document.getElementById('bottoneGenera');
-
+var bottoneAnnulla = document.getElementById('bottoneAnnulla');
 
 
 /**
@@ -66,5 +66,18 @@ bottoneGenera.addEventListener('click',
 
 // Reset biglietto
 
-
-
+bottoneAnnulla.addEventListener('click',
+    function(){
+        // Svuotamento campi input
+        document.getElementById('nome').value = '';
+        document.getElementById('km').value = '';
+        document.getElementById('fascia-eta').value = 'minorenne';
+        // Svuotamento campi output
+        document.getElementById('offerta-applicata').innerHTML = '';
+        document.getElementById('carrozza').innerHTML = '';
+        document.getElementById('codice-cp').innerHTML = '';
+        document.getElementById('costo').innerHTML = '';
+        // Nascondi biglietto
+        container.className = 'hidden';
+    }
+)
