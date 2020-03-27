@@ -3,89 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+		<title>Document</title>
+		<!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     
-    <div class="wrapper">
-        <h1 class="title">Calcola il prezzo del tuo biglietto</h1>
+	<div class="app u-montserrat">
+		<div class="wrapper">
+			<div class="title-box u-relative">
+				<h1 class="title title-banner u-white u-text-bold">Calcola il prezzo del tuo biglietto</h1>
+			</div>
+			
 
-        <div class="dati-input">
-            <div class="row">
-                <div class="col">
-                    <label for="nome">Nome e Cognome</label>
-                    <input id="nome" type="text" 
-                           name="nome"
-                            placeholder="inserisci il tuo nome"
-                    >
-                </div>
-                <div class="col">
-                    <label for="km">Km da percorrere</label>
-                    <input id="km" type="number" min="1" max="300"
-                           name="km"
-                            placeholder="inserisci i Km"
-                    >
-                </div>
-                <div class="col">
-                    <label for="fascia-eta">Fascia d'età</label>
-                    <select name="fascia-eta" id="fascia-eta">
-                        <option value="minorenne">Minorenne</option>
-                        <option value="maggiorenne">Maggiorenne</option>
-                        <option value="over65">Over 65</option>
-                    </select>
-                </div>
-            </div>
+			<div class="dati-input">
+				<div class="row">
+					<div class="col">
+						<label for="nome">Nome e Cognome</label>
+						<input id="nome" type="text" 
+										name="nome"
+										placeholder="inserisci il tuo nome"
+						>
+					</div>
+					<div class="col">
+						<label for="km">Km da percorrere</label>
+						<input id="km" type="number" min="1" max="300"
+										name="km"
+										placeholder="inserisci i Km"
+						>
+					</div>
+					<div class="col">
+						<label for="fascia-eta">Fascia d'età</label>
+						<select name="fascia-eta" id="fascia-eta">
+							<option value="minorenne">Minorenne</option>
+							<option value="maggiorenne">Maggiorenne</option>
+							<option value="over65">Over 65</option>
+						</select>
+					</div>
+				</div>
 
-            <div class="row">
-                <button class="btn" id="bottoneGenera">Genera</button>
-                <button class="btn" id="bottoneAnnulla">Annulla</button>
-            </div>
-        </div>
+				<div class="row">
+					<button class="btn btn-green u-mgbot-s" id="bottoneGenera">Genera</button>
+					<button class="btn btn-red" id="bottoneAnnulla">Annulla</button>
+				</div>
+			</div>
 
-        <section id="biglietto" class="hidden">
-            <h2 class="title">Il tuo biglietto</h2>
+			<section id="biglietto" class="hidden">
+				<h2 class="title u-text-center u-padtop-md u-text-bold u-text-xl" >Il tuo biglietto</h2>
 
-            <h3>Dettagli passeggeri</h3>
+				<h3 class="u-text-center u-text-bold u-grey u-padbot-s">Dettagli passeggeri</h3>
 
-            <div class="contenuti">
-                <div class="nome">
-                    <h2>Nome Passeggero</h2>
-                    <h3 id="nome-passeggero"></h3>
-                </div>
-                <div class="offerta">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Offerta</th>
-                                <th>Carrozza</th>
-                                <th>Codice CP</th>
-                                <th>Costo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span id="offerta-applicata"></span>
-                                </td>
-                                <td>
-                                    <span id="carrozza"></span>
-                                </td>
-                                <td>
-                                    <span id="codice-cp"></span>
-                                </td>
-                                <td>
-                                    <span id="costo"></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-    </div>
+				<div class="contenuti u-text-center">
+						<div class="nome">
+							<h2 class="u-text-md u-grey">Nome Passeggero</h2>
+							<h3 id="nome-passeggero" class="u-text-l"></h3>
+						</div>
+					<div class="offerta u-padtop-l">
+						<table>
+							<thead>
+								<tr>
+									<th>Offerta</th>
+									<th>Carrozza</th>
+									<th>Codice CP</th>
+									<th>Costo</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span id="offerta-applicata"></span>
+									</td>
+									<td>
+										<span id="carrozza"></span>
+									</td>
+									<td>
+										<span id="codice-cp"></span>
+									</td>
+									<td>
+										<span id="costo"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
 
-    <!-- JS -->
-    <script src="js/main.js"></script>
+	<!-- JS -->
+	<script src="js/main.js"></script>
 </body>
 </html>
