@@ -75,6 +75,14 @@ text-decoration: none;
   align-items: center;
 }
 
+.subtitle{
+  visibility: hidden; 
+}
+
+.item__active{
+  background-color: #fff;
+}
+
 .subnav--item h4{
   font-size: 12px;
   text-align: center;
